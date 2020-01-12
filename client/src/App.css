@@ -27,12 +27,58 @@
 .App-link {
   color: #61dafb;
 }
+.error, .success{
+  display: block;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.error{
+  color:#992525;
+}
+.success{
+  color:#6daa3c;
+}
+.loading{
+  display: block;
+  animation: loading-spin 1s infinite;
+  margin: 0 auto;
+  padding: 50px;
+  color: #444444;
+}
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotateZ(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes loading-spin{
+  0%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(360deg);
+  }
+}
+
+@-moz-keyframes loading-spin{
+  0%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes loading-spin{
+  0%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(360deg);
   }
 }
