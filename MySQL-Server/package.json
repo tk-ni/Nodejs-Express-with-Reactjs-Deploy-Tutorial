@@ -1,0 +1,26 @@
+{
+  "name": "mysql-server",
+  "version": "1.0.0",
+  "description": "MySQL NodeJs Express server for a deployment tutorial",
+  "main": "server.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tk-ni/Nodejs-Express-with-Reactjs-Deploy-Tutorial.git"
+  },
+  "author": "https://github.com/tk-ni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tk-ni/Nodejs-Express-with-Reactjs-Deploy-Tutorial/issues"
+  },
+  "homepage": "https://github.com/tk-ni/Nodejs-Express-with-Reactjs-Deploy-Tutorial#readme"
+}
