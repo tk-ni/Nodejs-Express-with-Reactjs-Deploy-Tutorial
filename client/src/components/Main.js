@@ -8,6 +8,7 @@ class Main extends React.Component {
         super(props);
         this.state = {
             loading: true,
+            users: '',
             err: false
         }
     }
@@ -17,7 +18,9 @@ class Main extends React.Component {
             method: 'GET'
         }).then(res => {
             if (res.status === 200) {
-                this.setState({ loading: false }, () => { })
+                res.json().then(data =>{
+                    this.setState({ loading: false, users: data }, () => {})
+                })
             } else {
                 this.setState({ loading: false, err: true }, () => { })
             }
@@ -32,11 +35,13 @@ class Main extends React.Component {
         } if (this.state.err) {
             return (<div className="error">
                 <FontAwesomeIcon icon={faTimesCircle} size={"4x"}/>
+                <p>Could not connect to server! check the ServerUrl variable and the Server logs.</p>
             </div>)
         } else {
             return (<div className="success">
                 <FontAwesomeIcon icon={faCheckCircle} size={"4x"}/>
                 <p>Response Status 200!</p>
+                {this.state.users.length > 0 ? this.state.users.map(user => <div>{user.first_name + ' ' + user.last_name}</div>) : 'No Users Found! Check connection to DB.'}
             </div>)
         }
 
