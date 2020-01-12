@@ -1,1 +1,1 @@
-export const ServerUrl = 'http://localhost:3201'
+export const ServerUrl = 'https://fathomless-thicket-80251.herokuapp.com';

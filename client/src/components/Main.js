@@ -36,6 +36,7 @@ class Main extends React.Component {
         } else {
             return (<div className="success">
                 <FontAwesomeIcon icon={faCheckCircle} size={"4x"}/>
+                <p>Response Status 200!</p>
             </div>)
         }
 
